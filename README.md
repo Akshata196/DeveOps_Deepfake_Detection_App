@@ -46,8 +46,8 @@ The model is a hybrid architecture combining:
 ## Folder Structure
 deepfake-app/
 │
-├──> app.py
-├──> index.html
+├── app.py
+├── index.html
 ├── Dockerfile
 ├── hybrid_model.pth
 ├── deployment.yaml
@@ -131,6 +131,7 @@ minikube service deepfake-service
 - Confidence score shown
 
 ---
+<img src="10-2.png" width="800">
 
 ## Advantages
 - Automated deployment using CI/CD

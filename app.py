@@ -1,4 +1,4 @@
-import torch
+self.cnn = models.resnet18(weights=None)import torch
 import torch.nn as nn
 import torchvision.models as models
 import torchvision.transforms as transforms
@@ -18,10 +18,10 @@ class HybridModel(nn.Module):
     def __init__(self):
         super().__init__()
 
-        self.cnn = models.resnet18(weights="DEFAULT")
+        self.cnn = models.resnet18(weights=None)
         self.cnn.fc = nn.Identity()
 
-        self.freq_model = models.mobilenet_v2(weights="DEFAULT")
+        self.freq_model = models.mobilenet_v2(weights=None)
         self.freq_model.classifier[1] = nn.Identity()
 
         self.classifier = nn.Linear(512 + 1280, 2)

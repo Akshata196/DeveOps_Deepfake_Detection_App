@@ -10,6 +10,12 @@ import io
 
 app = FastAPI()
 
+#Add route
+@app.get("/", response_class=HTMLResponse)
+def home():
+    with open("index.html") as f:
+        return f.read()
+
 # ==============================
 # 🔹 Model Definition
 # ==============================
